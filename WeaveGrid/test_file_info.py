@@ -1,5 +1,6 @@
 import unittest
 import file_info
+import os
 
 class TestFileInfo(unittest.TestCase):
 
@@ -13,6 +14,7 @@ class TestFileInfo(unittest.TestCase):
         self.assertEqual(path_dict["test"]["test/simple_file.txt"]["file content"], "I am a simple file.\n")
 
     def test_read_only(self):
+        os.system("chmod 444 test/test_read_only_file")
         file_class = file_info.FileInfo("test", False)
         path_dict = file_class.build_and_write_to_json()
         self.assertEqual(path_dict["test"]["test/test_read_only_file"]["file permissions (octal)"], "0o100444")
