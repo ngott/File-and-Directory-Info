@@ -15,7 +15,7 @@ git clone https://github.com/ngott/File-and-Directory-Info.git
 3) Navigate to the right directory
 
 ```bash
-cd WeaveGrid/
+cd File-and-Directory-Info/WeaveGrid/
 ```
 
 4) Build the docker container!
